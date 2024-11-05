@@ -15,7 +15,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers("/", "/login", "/css/**", "/js/**").permitAll()
+                        //Pages that can be accessed without being logged in
+                        .requestMatchers("/", "/login", "/adoptionpage", "/css/**", "/js/**").permitAll()
+                        //All other pages need to be authenticated
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
