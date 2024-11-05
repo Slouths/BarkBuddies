@@ -22,4 +22,9 @@ public class BarkBuddiesApplication {
 	public String login() {
 		return "login";
 	}
+
+	@GetMapping("/adoptionpage")
+	public String adoptionpage() {
+		return "adoptionpage";
+	}
 }
