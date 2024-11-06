@@ -27,4 +27,6 @@ public class BarkBuddiesApplication {
 	public String adoptionpage() {
 		return "adoptionpage";
 	}
+
+
 }
