@@ -16,7 +16,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(authz -> authz
                         //Pages that can be accessed without being logged in
-                        .requestMatchers("/", "/login", "/adoptionpage", "/css/**", "/js/**").permitAll()
+                        .requestMatchers("/", "/login", "/dogForm", "/adoptionpage", "/css/**", "/js/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form

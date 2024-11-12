@@ -1,4 +1,4 @@
-package com.barkbuddiesrescue.BarkBuddies.controller;
+package com.barkbuddiesrescue.BarkBuddies;
 
 import lombok.Getter;
 import lombok.Setter;
