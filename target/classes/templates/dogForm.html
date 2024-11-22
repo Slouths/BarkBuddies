@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Add New Dog</title>
+</head>
+<body>
+<h1>Add New Dog</h1>
+<form th:action="@{/dogForm}" th:object="${dog}" method="post">
+    <div>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" required />
+    </div>
+    <div>
+        <label>Age:</label>
+        <input type="number" th:field="*{age}" />
+    </div>
+    <div>
+        <label>Breed:</label>
+        <input type="text" th:field="*{breed}" required />
+    </div>
+    <div>
+        <label>Gender:</label>
+        <select th:field="*{gender}">
+            <option th:each="gender : ${T(com.barkbuddiesrescue.BarkBuddies.Dog.Gender).values()}"
+                    th:value="${gender}" th:text="${gender}">
+            </option>
+        </select>
+    </div>
+    <div>
+        <label>Weight:</label>
+        <input type="number" step="0.1" th:field="*{weight}" />
+    </div>
+    <div>
+        <label>Description:</label>
+        <textarea th:field="*{description}"></textarea>
+    </div>
+    <div>
+        <label>Medical History:</label>
+        <textarea th:field="*{medicalHistory}"></textarea>
+    </div>
+    <div>
+        <label>Behavioral Notes:</label>
+        <textarea th:field="*{behavioralNotes}"></textarea>
+    </div>
+    <div>
+        <label>Adoption Status:</label>
+        <select th:field="*{adoptionStatus}">
+            <option th:each="status : ${T(com.barkbuddiesrescue.BarkBuddies.Dog.AdoptionStatus).values()}"
+                    th:value="${status}" th:text="${status}">
+            </option>
+        </select>
+    </div>
+    <div>
+        <label>Photo URL:</label>
+        <input type="text" th:field="*{photoUrl}" />
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
