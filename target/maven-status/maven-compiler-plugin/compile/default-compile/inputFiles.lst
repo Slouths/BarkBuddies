@@ -1,4 +1,10 @@
-C:\Users\danie\Downloads\FIU\2024\FALL 2024\programming\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\BarkBuddiesApplication.java
-C:\Users\danie\Downloads\FIU\2024\FALL 2024\programming\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\SecurityConfig.java
-C:\Users\danie\Downloads\FIU\2024\FALL 2024\programming\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\controller\AuthController.java
-C:\Users\danie\Downloads\FIU\2024\FALL 2024\programming\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\Dog.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\AuthController.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\BarkBuddiesApplication.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\Database\Dog.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\Database\DogController.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\Database\DogRepository.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\Database\User.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\Database\UserRepository.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\Database\UserService.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\DataInitializer.java
+C:\Users\ozznu\Desktop\test\BarkBuddies\src\main\java\com\barkbuddiesrescue\BarkBuddies\config\SecurityConfig.java

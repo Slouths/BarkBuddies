@@ -1,7 +1,2 @@
-com\barkbuddiesrescue\BarkBuddies\Dog$AdoptionStatus.class
-com\barkbuddiesrescue\BarkBuddies\Dog.class
 com\barkbuddiesrescue\BarkBuddies\BarkBuddiesApplication.class
-com\barkbuddiesrescue\BarkBuddies\controller\AuthController.class
-com\barkbuddiesrescue\BarkBuddies\controller\AuthController$LoginRequest.class
-com\barkbuddiesrescue\BarkBuddies\Dog$Gender.class
 com\barkbuddiesrescue\BarkBuddies\config\SecurityConfig.class

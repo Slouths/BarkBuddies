@@ -1,6 +1,6 @@
-package com.barkbuddiesrescue.BarkBuddies;
+package com.barkbuddiesrescue.BarkBuddies.config.Database;
 
-import com.barkbuddiesrescue.BarkBuddies.Dog;
+//import com.barkbuddiesrescue.BarkBuddies.Dog;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

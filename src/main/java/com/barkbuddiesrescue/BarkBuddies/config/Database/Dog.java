@@ -1,4 +1,4 @@
-package com.barkbuddiesrescue.BarkBuddies;
+package com.barkbuddiesrescue.BarkBuddies.config.Database;
 
 import jakarta.persistence.*;
 import lombok.Data;

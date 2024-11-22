@@ -1,4 +1,4 @@
-package com.barkbuddiesrescue.BarkBuddies;
+package com.barkbuddiesrescue.BarkBuddies.config.Database;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
