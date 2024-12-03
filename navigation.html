@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Rescue Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Dog Rescue Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="navigateTo('adoption')">Adoption Portal</a></li>
+                <li><a href="#" onclick="navigateTo('donation')">Donation Page</a></li>
+                <li><a href="#" onclick="logout()">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="home-section">
+            <h2>Home</h2>
+            <p>Welcome! Click the links above to navigate through our site.</p>
+        </section>
+
+        <section id="adoption-section" style="display: none;">
+            <h2>Adoption Portal</h2>
+            <p>Here you can view dogs available for adoption.</p>
+        </section>
+
+        <section id="donation-section" style="display: none;">
+            <h2>Donation Page</h2>
+            <p>Support our rescue mission by making a donation.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
