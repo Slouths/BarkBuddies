@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Portal - Filter Dogs by Breed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .filter-section {
+            margin-bottom: 20px;
+        }
+
+        .dog-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .dog-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adoption Portal - Filter Dogs by Breed</h1>
+
+    <div class="filter-section">
+        <label for="breed-select">Select Breed:</label>
+        <select id="breed-select">
+            <option value="All">All</option>
+            <option value="Labrador">Labrador</option>
+            <option value="Golden Retriever">Golden Retriever</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Poodle">Poodle</option>
+        </select>
+        <button id="filter-button">Filter</button>
+        <button id="logout-button">Log Out</button>
+    </div>
+
+    <div id="dog-list" class="dog-list"></div>
+
+    <script>
+        document.getElementById("filter-button").addEventListener("click", filterDogs);
+
+        function filterDogs() {
+            const selectedBreed = document.getElementById("breed-select").value;
+
+            // Simulate fetching data from the backend
+            fetch(`/filterDogs?breed=${selectedBreed}`)
+                .then(response => response.json())
+                .then(data => {
+                    displayDogs(data);
+                });
+        }
+
+        function displayDogs(dogs) {
+            const dogList = document.getElementById("dog-list");
+            dogList.innerHTML = ""; // Clear the existing list
+
+            if (dogs.length === 0) {
+                dogList.innerHTML = "<p>No dogs found for the selected breed.</p>";
+                return;
+            }
+
+            dogs.forEach(dog => {
+                const dogCard = document.createElement("div");
+                dogCard.className = "dog-card";
+                dogCard.innerHTML = `
+                    <h3>${dog.name}</h3>
+                    <p>Breed: ${dog.breed}</p>
+                    <p>Age: ${dog.age}</p>
+                `;
+                dogList.appendChild(dogCard);
+            });
+        }
+
+        // Log Out Functionality
+        document.getElementById("logout-button").addEventListener("click", () => {
+            window.location.href = "/logout";
+        });
+    </script>
+</body>
+</html>
