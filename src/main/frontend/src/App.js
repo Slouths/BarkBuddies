@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import AdoptionPage from './components/AdoptionPage';
 import './styles/App.css';
+import DonationPage from './components/DonationPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/adoptionpage" element={<AdoptionPage />} />
+          <Route path="/donationpage" element={<DonationPage />} />
         </Routes>
       </div>
     </Router>
