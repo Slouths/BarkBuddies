@@ -5,6 +5,7 @@ import '../styles/Navbar.css';
 function Navbar() {
   return (
     <header className="navbar">
+      <img src="./images/logodog.png" alt=""/>
       <h1>Bark Buddies Rescue</h1>
       <nav>
         <Link to="/" className="nav-link">Home</Link>

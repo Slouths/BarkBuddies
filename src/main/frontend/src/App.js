@@ -7,6 +7,7 @@ import Login from './components/Login';
 import AdoptionPage from './components/AdoptionPage';
 import './styles/App.css';
 import DonationPage from './components/DonationPage';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/adoptionpage" element={<AdoptionPage />} />
           <Route path="/donationpage" element={<DonationPage />} />
         </Routes>

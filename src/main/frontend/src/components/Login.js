@@ -1,34 +1,28 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Login.css';
 
 function Login() {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          'username': username,
-          'password': password,
-        }),
-      });
+  // test creds
+  const hardcodedCredentials = {
+    email: 'test@user.com',
+    password: 'testPassword',
+  };
 
-      if (response.ok) {
-        navigate('/adoptionpage');
-      } else {
-        alert('Login failed. Please check your credentials.');
-      }
-    } catch (error) {
-      console.error('Login error:', error);
-      alert('Login failed. Please try again.');
+  // navigates to adoption page after successful login
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      email === hardcodedCredentials.email &&
+      password === hardcodedCredentials.password
+    ) {
+      navigate('/adoptionpage');
+    } else {
+      alert('Login failed. Please check your credentials.');
     }
   };
 
@@ -38,12 +32,12 @@ function Login() {
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="email">Email:</label>
             <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -59,6 +53,9 @@ function Login() {
           </div>
           <button type="submit">Login</button>
         </form>
+        <p>
+          Don't have an account? <Link to="/register">Register here</Link>
+        </p>
       </div>
     </div>
   );
